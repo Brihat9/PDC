@@ -47,7 +47,7 @@ class MyThread(threading.Thread):
             '''
             print("\nCalculating s[" + str(self.index + 1) + "]...")
             arr_s[self.index] = sum(input_array[:self.index + 1])
-            print("\n\t\tb[" + str(self.index + 1) + "] calculated.")
+            print("\n\t\ts[" + str(self.index + 1) + "] calculated.")
 
         elif(self.to_calc == 'Mem'):
             '''
