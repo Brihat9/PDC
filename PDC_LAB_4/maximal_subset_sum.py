@@ -15,6 +15,7 @@ for i in range(0, input_length):
         sum = sum + input_array[j]
         subset_sum.append((i, j, sum))
 
+# max_tuple = (start_index, end_index, sum)
 max_tuple = (0, 0, 0)
 
 for tupl in subset_sum:
