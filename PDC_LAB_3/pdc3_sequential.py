@@ -3,21 +3,21 @@
 from decimal import Decimal
 import time
 
-#input_str = input("Enter input string: ")
+# input_str = input("Enter input string: ")
 
 input_str = '()((()))(())'
 
 input_length = len(input_str)
 
-b = [None] * input_length;
-p = [None] * input_length;
+b = [None] * input_length
+p = [None] * input_length
 
-q = [-1] * input_length;
-t = [0] * input_length;
-r = [0] * input_length;
+q = [-1] * input_length
+t = [0] * input_length
+r = [0] * input_length
 
 # Result
-m = [None] * input_length;
+m = [None] * input_length
 
 print("Starting...")
 
@@ -37,8 +37,9 @@ for i in range(input_length):
     p[i] = (p[i] - (1/(i+1)))
     print("\n\t\tp[" + str(i + 1) + "] calculated.")
 
-''' calculates q '''
+
 def q_arr(val):
+    ''' calculates q '''
     res = []
     max_val = -1
     for i in range(input_length):
@@ -50,12 +51,14 @@ def q_arr(val):
 
     return max_val
 
+
 print("\nCalculating q...")
 q = [q_arr(p[i]) for i in range(input_length)]
 print("\n\t\tq calculated.")
 
-''' calculates t '''
+
 def t_arr(val):
+    ''' calculates t '''
     res = []
     max_val = 0
     for i in range(input_length):
@@ -67,12 +70,14 @@ def t_arr(val):
 
     return max_val
 
+
 print("\nCalculating t...")
 t = [t_arr(q[i]) for i in range(input_length)]
 print("\n\t\tt calculated.")
 
-''' calculates r '''
+
 def r_arr(val):
+    ''' calculates r '''
     res = []
     max_val = 0
     for i in range(input_length):
@@ -83,6 +88,7 @@ def r_arr(val):
         max_val = min(res)
 
     return max_val
+
 
 print("\nCalculating r...")
 r = [r_arr(i+1) for i in range(input_length)]

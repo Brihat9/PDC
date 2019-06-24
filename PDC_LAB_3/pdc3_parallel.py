@@ -4,22 +4,22 @@ from decimal import Decimal
 import threading
 import time
 
-#input_str = input("Enter input string: ")
+# input_str = input("Enter input string: ")
 
 input_str = '()((()))(())'
 # input_str = '(()()()()()()()()())'
 
 input_length = len(input_str)
 
-arr_b = [None] * input_length;
-arr_p = [None] * input_length;
+arr_b = [None] * input_length
+arr_p = [None] * input_length
 
-arr_q = [-1] * input_length;
-arr_t = [0] * input_length;
-arr_r = [0] * input_length;
+arr_q = [-1] * input_length
+arr_t = [0] * input_length
+arr_r = [0] * input_length
 
 # Result
-arr_m = [None] * input_length;
+arr_m = [None] * input_length
 
 ''' Operations
     'b' - calculates b[i]
@@ -107,6 +107,7 @@ class MyThread(threading.Thread):
 
         else:
             print("Something went wrong !!!")
+
 
 print("Starting...")
 
